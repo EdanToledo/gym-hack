@@ -7,7 +7,7 @@ from version import VERSION
 
 # Environment-specific dependencies.
 extras = {
-  'mujoco': ['mujoco-py==2.0.2.5'],
+  'mujoco': ['mujoco-py==2.0.2.13'],
 }
 
 # Meta dependency groups.
