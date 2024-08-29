@@ -18,7 +18,7 @@ setup(name='gym',
       install_requires=[
           'scipy', 'numpy>=1.10.4', 'pyglet>=1.4.0,<=1.5.0', 'Pillow<=7.2.0', 'cloudpickle>=1.2.0,<1.7.0',
       ],
-      extras_require=[],
+      extras_require={},
       package_data={'gym': [
         'envs/mujoco/assets/*.xml',
         'envs/classic_control/assets/*.png',
