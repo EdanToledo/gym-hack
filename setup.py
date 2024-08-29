@@ -5,11 +5,6 @@ import sys, os.path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'gym'))
 from version import VERSION
 
-# Environment-specific dependencies.
-extras = {
-  'mujoco': ['mujoco-py==2.0.2.13'],
-}
-
 # Meta dependency groups.
 extras['nomujoco'] = list(set([item for name, group in extras.items() if name != 'mujoco' and name != "robotics" for item in group]))
 extras['all'] = list(set([item for group in extras.values() for item in group]))
@@ -25,7 +20,7 @@ setup(name='gym',
                 if package.startswith('gym')],
       zip_safe=False,
       install_requires=[
-          'scipy', 'numpy>=1.10.4', 'pyglet>=1.4.0,<=1.5.0', 'Pillow<=7.2.0', 'cloudpickle>=1.2.0,<1.7.0', 'mujoco-py==2.0.2.13'
+          'scipy', 'numpy>=1.10.4', 'pyglet>=1.4.0,<=1.5.0', 'Pillow<=7.2.0', 'cloudpickle>=1.2.0,<1.7.0',
       ],
       extras_require=extras,
       package_data={'gym': [
